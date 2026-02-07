@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday, My Love🩵🫶</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    overflow: hidden;
+    color: white;
+  }
+
+  .card {
+    background: rgba(0,0,0,0.7);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 40px #00eaff;
+    animation: pulse 2s infinite alternate;
+    max-width: 90%;
+  }
+
+  h1 {
+    color: #00eaff;
+    font-size: 2.7em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .emoji {
+    font-size: 3.5em;
+    animation: bounce 1.4s infinite;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    font-size: 1em;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00eaff, #00ffb3);
+    color: black;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
+  .hidden {
+    display: none;
+    margin-top: 15px;
+    color: #00ffb3;
+    font-size: 1.1em;
+  }
+
+  @keyframes pulse {
+    from { box-shadow: 0 0 25px #00eaff; }
+    to { box-shadow: 0 0 55px #00eaff; }
+  }
+
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+
+  .confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: -10px;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Cheers to 18✨🥂</h1>
+  <p>Level up day unlocked 🔓</p>
+
+  <div class="emoji">🎮🎂🩵</div>
+
+  <p>
+    Happy birthday ❤️🎈<br>
+May god bless you with all your favourite things and always love in your life, not just like that even lots of happiness, joy and a wonderful health. I'm so blessed and greatful that someone as you is with me with all my ups downs, Just you being there made it so beautiful and magical. Thank you for being with me in my worst situation, loving me and taking care of me, I hope your birthday this year will be better than pervious one, you deserve all good things, Thank you, and I'm so proud of you and what you're becoming. I'm sorry for the times i hurt you... I didn't mean to... and let's not be sad in a wonderful occasion like this... and rememberrrrrrr I love youuuu alright? I'm grateful to have you in my life and today my favourite person was born, truly a angelic and magical that i got to meet you. You're enough and never doubt yourself, you're special and so different from others that's what makes youuuuu unique and rareeeeee!!! Have a great day and I always love you. I'll be there when you need me and KEEPPPPPP SMILINGGGGGGGG and I'm sorry for times I hurt you, My little Angel🤍🫶
+  </p>
+
+  <button onclick="reveal()">Click for secret 👀</button>
+
+  <div id="secret" class="hidden">
+    I love you and always love yourself like I love you and never stop being you, mere bachha🤍🤭.
+  </div>
+
+  <br>
+  <button onclick="playMusic()">Play vibe 🎧</button>
+</div>
+
+<audio id="music">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1b6f2c3e6f.mp3?filename=future-bass-11770.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  function reveal() {
+    document.getElementById("secret").style.display = "block";
+  }
+
+  function playMusic() {
+    document.getElementById("music").play();
+  }
+
+  for (let i = 0; i < 45; i++) {
+    let c = document.createElement("div");
+    c.className = "confetti";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.background =
+      ["#00eaff", "#00ffb3", "#ffffff"][Math.floor(Math.random() * 3)];
+    c.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(c);
+  }
+</script>
+
+</body>
+</html>
